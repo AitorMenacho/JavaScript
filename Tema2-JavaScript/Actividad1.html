@@ -4,38 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 1</title>
+    <title>Document</title>
 </head>
+<script>
+    
+    var numero = prompt("Introduce el número y se mostrará su factorial.");
+    var resultado = 1;
+
+    for (let i = 1; i <= numero; i++) {
+        
+        resultado *= i;
+        
+    }
+
+    alert("El factorial de " + numero + " es " + resultado);
+
+</script>
 <body>
-    <h2>Código fuente de un ejemplo básico con JavaScript</h2>
-    <script>
-        //Definimos variables
-        var nombre,apellidos,edad,hermanos;
-
-        nombre    = "Rafa";
-        apellidos = "Martinez Díaz";
-        edad      = 38;
-        hermanos  = 3;
-
-        //Imprimo el nombre y los apellidos
-        document.write("Hola " + nombre + " " + apellidos);
-
-        //Imprimo un salto de línea
-        document.write("<br/>")
-
-        //Imprimo la edad y el número de hermanos
-        document.write(nombre + " tienes " + edad + " años y además tienes " + hermanos + " hermanos.</br>");
-
-        //Fijate en la diferencia entre las dos sigueintes lineas.
-        document.write("Dentro de 15 años tu edad será " + edad + 15 + ".</br>");
-        document.write("Dentro de 15 años tu edad será " + (edad + 15) + ".</br>");
-
-        //Tu nombre escrito 50 veces
-        for (i = 0; i <= 50; i++) {
-            
-            document.write(nombre+',');
-            
-        }
-    </script>
+    
 </body>
 </html>
