@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<script>
+    var numero = prompt("¿Hasta que número quiere ver?");
+    var cont = 0;
+
+    document.write(1 + ", ");
+
+    for( x = 1; x <= numero; x++ ){
+
+        for( y = 1; y <= x; y++ ){
+
+            if( (x % y) == 0 ) cont++;
+
+        }
+
+        if( cont == 2 ){
+
+            document.write(x + ", ");
+
+        }
+
+        cont = 0;
+
+    }
+
+
+</script>
+<body>
+    
+</body>
+</html>
