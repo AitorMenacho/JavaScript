@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<script>
+
+    do{
+
+        var fila = prompt("¿Cuantas filas?");
+
+        fila.trim();
+
+    }while( isNaN(fila) || fila == "" );
+
+    do {
+        
+        var colum = prompt("Número de columnas");
+
+        colum.trim();
+
+    }while( isNaN(colum) || colum == "" );
+
+    document.write("<table style='width:100%; border:1px solid black;'>")
+
+    for ( x = 0; x < fila; x++) {
+        
+        document.write("<tr style='border:1px solid black;'>");
+
+        for( y = 0; y < colum; y++ ){
+
+            document.write("<td style='border:1px solid black;'>Hola</td>");
+
+        }
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+
+</script>
+<body>
+    
+</body>
+</html>
