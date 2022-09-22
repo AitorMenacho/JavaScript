@@ -14,7 +14,7 @@
 
         fila.trim();
 
-    }while( isNaN(fila) || fila == "" );
+    }while( isNaN(fila) || fila == "" || fila < 10 );
 
     do {
         
@@ -22,7 +22,9 @@
 
         colum.trim();
 
-    }while( isNaN(colum) || colum == "" );
+    }while( isNaN(colum) || colum == "" || colum > 20);
+
+    var num = fila * colum;
 
     document.write("<table style='width:100%; border:1px solid black;'>")
 
@@ -32,7 +34,7 @@
 
         for( y = 0; y < colum; y++ ){
 
-            document.write("<td style='border:1px solid black;'>Hola</td>");
+            document.write("<td style='border:1px solid black;'>" + num-- + "</td>");
 
         }
         document.write("</tr>");
