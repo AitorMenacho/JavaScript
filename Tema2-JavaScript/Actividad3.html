@@ -7,8 +7,13 @@
     <title>Ejercicio 3</title>
 </head>
 <script>
-    
-    var palabra = prompt("Escriba la palabra.")
+
+    do{
+
+        var palabra = prompt("Escriba la palabra.")
+
+    }while( !isNaN(palabra) );
+
     var resultado = compruebaPalabra(palabra);
 
     alert("La palabra está escrita en " + resultado)

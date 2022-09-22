@@ -7,9 +7,14 @@
     <title>Ejercicio 2</title>
 </head>
 <script>
-    var numero = prompt('Dime el número a comprobar si es par o impar');
-    var resultado = parImpar(numero);
     
+    do{
+
+        var numero = prompt('Dime el número a comprobar si es par o impar');
+        var resultado = parImpar(numero);
+
+    }while( isNaN(numero) );
+
     alert("El número " + numero + " es " + resultado);
 
     function parImpar(numero){

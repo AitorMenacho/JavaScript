@@ -7,9 +7,13 @@
     <title>Document</title>
 </head>
 <script>
-    
-    var numero = prompt("Introduce el número y se mostrará su factorial.");
-    var resultado = 1;
+
+    do{
+
+        var numero = prompt("Introduce el número y se mostrará su factorial.");
+        var resultado = 1;
+
+    }while( isNaN(numero) );
 
     for (let i = 1; i <= numero; i++) {
         

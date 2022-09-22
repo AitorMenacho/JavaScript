@@ -7,8 +7,13 @@
     <title>Ejercicio 5</title>
 </head>
 <script>
-    var numero = prompt("¿Hasta que número quiere ver?");
-    var cont = 0;
+
+    do{
+
+        var numero = prompt("¿Hasta que número quiere ver?");
+        var cont = 0;
+
+    }while( isNaN(numero) );
 
     document.write(1 + ", ");
 
