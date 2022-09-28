@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas de multiplicar</title>
+</head>
+
+<script>
+
+    var res = 0;
+    var x = 1;
+
+    document.write("<table style='margin:auto'>")
+
+        document.write("<tr>");
+
+            document.write("<td style='padding-right: 15vh'>");
+
+                document.write("<p>Tabla de multiplicar del 7:</p>")
+                for (let x = 1; x <= 10; x++) {
+
+                    res = 7 * x;
+                    document.write("7 x " + x + " = " + res);
+                    document.write("</br>");
+                }
+
+            document.write("</td>")
+
+            document.write("<td style='padding-right: 15vh'>");
+
+                document.write("<p>Tabla de sumar del 8:</p>")
+                while (x != 11) {
+
+                    res = 8 + x;
+                    document.write("8 + " + x + " = " + res);
+                    document.write("</br>");
+                    x++;
+
+                };
+
+            document.write("</td>")
+
+            document.write("<td style='padding-right: 15vh'>");
+            
+                document.write("<p>Tabla de dividir del 9:</p>")
+                x = 1;
+
+                do {
+
+                    res = 9 / x;
+                    document.write("9 / " + x + " = " + res);
+                    document.write("</br>");
+                    x++;
+
+                } while (x != 11);
+
+            document.write("</td>")
+
+        document.write("</tr>");
+
+    document.write("</table>");
+
+    // Cambio de seccion
+
+    res = 0;
+    document.write("<table style='margin:auto'>")
+        
+        document.write("<tr>");
+
+            document.write("<td style='padding-right: 15vh'>");
+
+                document.write("<p>125 / 8 con desplazamiento de bits</p>");
+                res = 125 >>> 3;
+                document.write("<p style='text-align: center'>");
+                    document.write(res);
+                document.write("</p>");
+                
+
+            document.write("</td>")
+
+            document.write("<td style='padding-right: 15vh'>");
+
+                document.write("<p>40 x 4 con desplazamiento de bits</p>")
+                res = 40 << 2;
+                document.write("<p style='text-align: center'>");
+                    document.write(res);
+                document.write("</p>");
+
+            document.write("</td>")
+
+        document.write("</tr>");
+
+        document.write("<tr>");
+
+            document.write("<td style='padding-right: 15vh'>");
+
+                document.write("<p>25 / 2 con desplazamiento de bits:</p>")
+                res = 25 >> 1;
+                document.write("<p style='text-align: center'>");
+                    document.write(res);
+                document.write("</p>");
+
+            document.write("</td>")
+
+            document.write("<td style='padding-right: 15vh'>");
+
+                document.write("<p>10 x 16 con desplazamiento de bits:</p>")
+                res = 10 << 4;
+                document.write("<p style='text-align: center'>");
+                    document.write(res);
+                document.write("</p>");
+
+            document.write("</td>")
+
+        document.write("</tr>");
+
+    document.write("</table>");
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

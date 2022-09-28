@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendente</title>
+</head>
+
+<script>
+
+var num1 = 0;
+var num2 = 0;
+var num3 = 0;
+
+var correcto = true;
+
+do {
+
+    num1 = prompt("Escoge el primer un número ( menor de 50 y mayor de 0 )");
+
+    if(num1 > 50 | num1 < 0 | num1 == "") {
+        correcto = false
+    } else{
+        correcto = true; 
+    } 
+
+} while ( correcto == false );
+
+do {
+
+    num2 = prompt("Escoge el segundo un número ( menor de 50 y mayor de 0 )");
+
+    if(num2 > 50 | num2 < 0 | num2 == "") {
+        correcto = false
+    } else{
+        correcto = true; 
+    } 
+
+} while ( correcto == false );
+
+do {
+
+    num3 = prompt("Escoge el tercer número ( menor de 50 y mayor de 0 )");
+
+    if(num3 > 50 | num3 < 0 | num2 == "") {
+        correcto = false
+    } else{
+        correcto = true; 
+    } 
+
+} while ( correcto == false );
+
+var reserva = 0;
+
+if( num1 < num2 ) {
+
+    reserva = num1;
+    num1 = num2;
+    num2 = reserva;
+
+} 
+
+if( num1 < num3 ) {
+
+    reserva = num1;
+    num1 = num3;
+    num3 = reserva;
+
+}
+
+if( num2 < num3 ) {
+
+    reserva = num2;
+    num2 = num3;
+    num3 = reserva;
+
+} 
+
+document.write( num1 + " " + num2 + " " + num3 );
+
+</script>
+
+<body>
+    
+</body>
+</html>
