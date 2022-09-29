@@ -12,7 +12,7 @@ var nuevaVentana;
 
 function crearNueva() {
 
-    nuevaVentana = window.open("http://www.google.es", "", "height = 400, width = 800");
+    nuevaVentana = window.open("https://aitormenachovega.000webhostapp.com/", "", "height = 400, width = 800");
 
 }
 
