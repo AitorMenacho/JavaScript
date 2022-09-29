@@ -2,8 +2,6 @@
 
 function inicializar() {
 
-    console.log("Hola");
-
     document.getElementById("crear-ventana").onclick  = crearNueva;
     document.getElementById("cerrar-ventana").onclick = cerrarNueva;
 
