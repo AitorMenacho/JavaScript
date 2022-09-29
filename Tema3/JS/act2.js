@@ -2,12 +2,11 @@
 function inicializar() {
 
     document.getElementById("crear-ventana").onclick  = crearNueva;
-    document.getElementById("cerrar-ventana").onclick = cerrarNueva;
 
 
 }
 
-var nuevaVentana;
+// var nuevaVentana;
 
 function crearNueva() {
 
