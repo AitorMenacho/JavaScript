@@ -8,6 +8,7 @@ function buscar() {
 
     var url = document.getElementById('url').value;
 
-    
+    // nuevaVentana.location.href = url;
+    nuevaVentana.location.replace(url);
 
 }
