@@ -11,6 +11,8 @@ function inicializar() {
 
 function imagen() {
 
+    $src = this.attributes[0].nodeValue;
+
     nuevaVentana = window.open(
         "", 
         "segundaPag", 
@@ -19,7 +21,7 @@ function imagen() {
 
     nuevaVentana.document.write("<html><head><title>Imagen completa</title></head>");
     nuevaVentana.document.write("<body>");
-    nuevaVentana.document.write("<img src='' alt=''>");
+    nuevaVentana.document.write(`<img src='${$src}' alt=''>`);
     nuevaVentana.document.write("<input type='button' value='cerrar' onClick='window.close()'>")
     nuevaVentana.document.write("</body>");
     nuevaVentana.document.write("</html>");
