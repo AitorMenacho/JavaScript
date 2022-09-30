@@ -12,8 +12,8 @@ function crearNueva() {
 
     nuevaVentana = window.open(
         "", 
-        "segundaPag", 
-        "toolbar=yes, location=no, menubar=yes, resizable=yes"
+        "", 
+        "toolbar=yes, location=no, menubar=yes, resizable=ye"
     )
 
     nuevaVentana.document.write("<html><head><title>Sin titulo</title></head>");
