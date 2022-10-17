@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+
+    <script>
+        
+        String.prototype.truncar = function( numero, cadenas ){
+
+            var tipoNumero  = typeof numero
+            var tipoCadenas = typeof cadenas 
+
+            if( tipoNumero == "number" ) {
+
+                if( cadenas == null ){
+
+                    var concatenado = this.substring( 0, numero )
+
+                } else {
+
+                    if( tipoCadenas == "string" ) {
+
+                        if(  cadenas.length < numero ) {
+
+                            var concatenado = this.substring( 0, numero - cadenas.length ) + cadenas
+
+                        } else {
+
+                            concatenado = "El número tiene que ser mayor que la cadena"
+
+                        }
+                    
+                    } else {
+
+                        concatenado = "El segundo valor debe ser un string"
+
+                    }
+
+
+                }
+
+            } else {
+
+                concatenado = "El primero valor debe ser un número"
+
+            }
+
+
+            return concatenado
+
+        }
+
+        var cadena   = "Hola mundo"
+
+        document.write("Sin truncar: " + cadena)
+        
+        var cadenaTruncada  = cadena.truncar(6)
+        var cadenaTruncada2 = cadena.truncar(6, "...")
+
+        document.write( "</br> Truncado: " + cadenaTruncada)
+        document.write( "</br> Truncado con puntos: " + cadenaTruncada2)
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

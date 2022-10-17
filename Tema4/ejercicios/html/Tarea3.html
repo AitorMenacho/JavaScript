@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+
+    <script>
+
+        Array.prototype.sin = function (numero) {
+
+            var x = Array1.indexOf(numero)
+
+            Array1.splice(x, 1)
+
+            return Array1
+
+        }
+
+        var Array1 = [1, 2, 3, 4, 5]
+
+        document.write("Sin filtrar: " + Array1)
+
+        var filtrado = Array1.sin(4)
+
+        document.write("</br> Filtrado: " + filtrado)
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

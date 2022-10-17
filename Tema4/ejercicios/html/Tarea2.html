@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+
+    <script>
+        function Producto_alimenticio( codigo, nombre, precio ){
+
+            this.codigo = codigo
+            this.nombre = nombre
+            this.precio = precio
+
+        }
+
+        var alimento1 = new Producto_alimenticio(  33, "Platanos", 1.5 )
+        var alimento2 = new Producto_alimenticio(  45, "Pasta de dientes", 0.75 )
+        var alimento3 = new Producto_alimenticio(  52, "Kikos", 0.50 )
+
+        Producto_alimenticio.prototype.imprimeDatos = function(){
+
+            return ("Código: " + this.codigo + ", Nombre: " + this.nombre + ", Precio: " + this.precio)
+
+        }
+
+        var alimentos = [alimento1, alimento2, alimento3]
+
+        for( var x = 0; x < alimentos.length; x++ ){
+
+            console.log(alimentos[x].toString());
+            
+        }
+        
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

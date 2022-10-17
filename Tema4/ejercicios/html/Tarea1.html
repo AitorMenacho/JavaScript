@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+
+    <script>
+        function Coche( codigo, nombre, precio ){
+
+            this.codigo = codigo
+            this.nombre = nombre
+            this.precio = precio
+
+        }
+
+        Coche.prototype.imprimeDatos = function(){
+
+            return ("Código: " + this.codigo + ", Nombre: " + this.nombre + ", Precio: " + this.precio)
+
+        }
+
+        var CocheEj = new Coche(  52, "Tiguan", 25000 )
+
+        document.write( CocheEj.imprimeDatos() )
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
