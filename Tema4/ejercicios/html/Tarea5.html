@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <script>
+        function diputado ( nombre, apellidos, dni, edad, partido ){
+
+            this.nombre = nombre
+            this.apellidos = apellidos
+            this.dni = dni
+            this.edad = edad
+            this.partido = partido
+
+            this.getNombre = function(){
+
+                return this.nombre
+            
+            }
+
+            this.setNombre = function( nombre ){
+            
+                this.nombre = nombre
+            
+            }
+
+            this.setNombre(nombre)
+
+            this.getApellidos = function(){
+                
+                return this.apellidos
+            
+            }  
+
+            this.setApellidos = function( apellidos){
+
+                this.apellidos = apellidos
+            
+            }
+            
+            this.setApellidos(apellidos)
+
+            this.getDni = function() {
+                
+                return this.dni
+            
+            }
+
+            this.setDni = function( dni ){
+
+                var letraDni  = dni.substring(dni.length - 1)
+                var numeroDni = dni.substring(0, dni.length - 1);
+
+                var letrasDni = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E']
+
+                var restoDni  = numeroDni % 23
+
+                if( letrasDni[restoDni] == letraDni ){
+                    
+                    this.dni = dni
+
+                } else {
+
+                    this.dni = "DNI erroneo"
+
+                }
+
+            }
+
+            this.setDni(dni)
+
+            this.getEdad = function(){
+            
+                return this.edad
+            
+            }
+
+            this.setEdad = function( edad ){
+
+                if( edad >= 25 && edad <= 65 ){
+
+                    this.edad = edad
+
+                } else {
+
+                    this.edad = "Error"
+
+                }
+
+            }
+
+            this.setEdad(edad)
+
+            this.getPartido = function(){
+            
+                return this.partido
+            
+            }
+
+            this.setPartido = function( partido ){
+            
+                this.partido = partido
+            
+            }
+
+            this.setPartido(partido)
+
+        }
+
+        diputado.prototype.toString = function(){
+
+            if( this.getEdad() != "Error" ) {
+                
+                return("Nombre: " + this.getNombre() + ", Apellidos: " + this.getApellidos() + ", DNI: " + this.getDni() + ", Edad: " + this.getEdad() + ", Partido: " + this.getPartido())
+            
+            } else {
+
+                return this.getNombre() + " no tiene la edad permitida"
+
+            }
+        }
+
+        var diputado1 = new diputado("Aina", "Miranda Castilla", "52385830H", "22", "PACMA")
+        var diputado2 = new diputado("Adolfo", "Pineda Peralta", "81689129Y", "39", "RISA")
+        var diputado3 = new diputado("Izan", "Ruiz Moreno", "26104249P", "50", "Teruel Existe")
+        var diputado4 = new diputado("Meritxell", "Pastor Arevalo", "08093254Z", "70", "PCOE")
+
+        var parlamento = new Array()
+
+        parlamento[0] = diputado1
+        parlamento[1] = diputado2
+        parlamento[2] = diputado3
+        parlamento[3] = diputado4
+
+        for( var x = 0; x < parlamento.length; x++ ){
+
+            document.write( parlamento[x].toString()+"<br>" )
+
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
