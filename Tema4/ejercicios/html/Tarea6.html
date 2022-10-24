@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+    <script>
+
+        function instituto(nombre, poblacion, codPostal,) {
+
+            this.nombre = nombre
+            this.poblacion = poblacion
+            this.codPostal = codPostal
+            this.tutores = new Array()
+
+            this.agregarCurso = function (curso, oferta) {
+
+                var ofertaFormativa = ['Enfermeria', 'Cocina', 'Rayos', 'Web']
+
+                if ((curso <= 0) || (curso > 2)) {
+
+                    document.write('No se permite el curso: ' + curso)
+
+                } else {
+
+                    if (this.tutores.length == 0) {
+
+                        for (var x = 0; x < curso; x++) {
+
+                            this.tutores[x] = new Array()
+
+                            for (var y = 0; y < ofertaFormativa.length; y++) {
+
+                                this.tutores[x].push("Sin tutor")
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            this.agregarTutor = function (nombre, curso, oferta) {
+
+                var ofertaFormativa = ['Enfermeria', 'Cocina', 'Rayos', 'Web']
+
+                if ((curso <= 0) || (curso > 2)) {
+
+                    document.write('No se permite el curso: ' + curso)
+
+                } else {
+
+                    if (oferta == 'Enfermeria') oferta_ele = 0
+                    if (oferta == 'Cocina') oferta_ele = 1
+                    if (oferta == 'Rayos') oferta_ele = 2
+                    if (oferta == 'Web') oferta_ele = 3
+
+                    this.tutores[(curso - 1)][oferta_ele] = nombre
+
+                    document.write("<li>" + this.tutores[curso - 1][oferta_ele] + " es ahora el tutor/a del curso " + (curso) + " de " + (oferta) + ".</li>")
+
+                }
+
+            }
+
+
+            this.imprimeNombre    = function () { return this.nombre }
+            this.imprimePoblacion = function () { return this.poblacion }
+            this.imprimeCodPostal = function () { return this.codPostal }
+
+
+            this.imprimeTutores = function () {
+
+                var ofertaFormativa = ['Enfermeria', 'Cocina', 'Rayos', 'Web']
+
+                document.write("<h2> Listado de tutores del instituto " + instituto1.imprimeNombre() + "</h2>")
+
+                for (var x = 0; x < this.tutores.length; x++) {
+
+                    for (var y = 0; y < this.tutores[x].length; y++) {
+
+                        document.write("<li> El tutor del curso " + (x + 1) + " de " + ofertaFormativa[y] + ":" + this.tutores[x][y] + "</li>")
+
+                    }
+
+                }
+
+            }
+
+            this.imprimeTutoresTabla = function () {
+
+                var ofertaFormativa = ['Enfermeria', 'Cocina', 'Rayos', 'Web']
+
+                document.write("<table border = '1'>")
+                    document.write("<tr> Listado de tutores del instituto" + instituto1.imprimeNombre() + "</tr>")
+
+                for (var x = 0; x < this.tutores.length; x++) {
+
+                    document.write("<tr>")
+
+                    for (var y = 0; y < this.tutores[x].length; y++) {
+
+                        document.write("<td>" + this.tutores[x][y] + "</td>")
+
+                    }
+
+                    document.write("</tr>")
+
+                }
+
+                document.write("</table>")
+
+            }
+
+        }
+
+        var instituto1 = new instituto("CDP Jose Cabrera", "Trebujena", "15706")
+
+        instituto1.agregarCurso(2, 'Web')
+
+        instituto1.agregarTutor('Manolo', '2', 'Web')
+        instituto1.agregarTutor('Lola',   '1', 'Web')
+        instituto1.agregarTutor('Kiko',   '2', 'Enfermeria')
+        instituto1.agregarTutor('Luisaa', '1', 'Rayos')
+        instituto1.agregarTutor('Carlos', '2', 'Cocina')
+
+
+        instituto1.imprimeTutores()
+        document.write('<br>')
+        instituto1.imprimeTutoresTabla()
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
