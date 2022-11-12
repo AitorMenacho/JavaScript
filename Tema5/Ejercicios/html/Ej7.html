@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón cambia de color dependiendo del cuadro</title>
+    <style>
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .cuadrado{
+            padding: 5%;
+            height: 15px;
+            width:15px;
+            margin: 5px;
+        }
+        
+    </style>
+    <script src="../js/Ej7.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="cuadrado" id="caja1" style="background-color: #156064;"    onmouseover="cambiarColor1()" ></div>
+        <div class="cuadrado" id="caja2" style="background-color: #00c49a;"   onmouseover="cambiarColor2()" ></div>
+        <div class="cuadrado" id="caja3" style="background-color: #F8E16C;"  onmouseover="cambiarColor3()" ></div>
+        <div class="cuadrado" id="caja4" style="background-color: #FFC2B4;" onmouseover="cambiarColor4()" ></div>
+    </div>
+    <div class="container">
+        <button style="text-align: center; margin-top: 10%; font-size: 40px;" id="boton">Cambiar color</button>
+    </div>
+</body>
+</html>
