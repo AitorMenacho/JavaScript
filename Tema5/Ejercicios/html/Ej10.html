@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formateador de texto</title>
+    <style>
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .opciones{
+            margin: 5px;
+        }
+
+    </style>
+    <script src="../js/Ej10.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="opciones" >
+            Fuente
+            <br>
+            <select name="fuente" id="fuente" onclick="cambiaFuente()">
+                <option value="Times">Times</option>
+                <option value="Arial">Arial</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Comic">Comic</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Courier">Courier</option>
+            </select>
+        </div>
+        <div class="opciones" >
+            Estilo
+            <br>
+            <select name="estilo" id="estilo" onclick="cambiaEstilo()" >
+                <option value="">Normal</option>
+                <option value="italic">Cursiva</option>
+            </select>
+        </div>
+        <div class="opciones" >
+            Color
+            <br>
+            <select name="color" id="color" onclick="cambiaColor()">
+                <option value="black">Negro</option>
+                <option value="red">Rojo</option>
+                <option value="green">Verde</option>
+                <option value="blue">Azul</option>
+                <option value="yellow">Anarillo</option>
+                <option value="pink">Malva</option>
+            </select>
+        </div>
+        <div class="opciones" >
+            Tamaño
+            <br>
+            <select name="tamano" id="tamano" onclick="cambiaTamanno()">
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+            </select>
+            <select name="tipo" id="tipo" onclick="cambiaTamanno()">
+                <option value="vh">Puntos</option>
+                <option value="px">Pixeles</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <p id="texto" >Nisi adipisicing eiusmod enim excepteur nulla est ad labore.</p>
+    </div>
+</body>
+</html>

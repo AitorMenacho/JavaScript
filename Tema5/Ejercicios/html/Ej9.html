@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar cuadro</title>
+    <style>
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .cuadro{
+            height: 100px;
+            width:100px;
+            margin: 5px;
+        }
+        
+        .fotoGrande{
+            border: 2px solid #fff;
+            height: 350px;
+            width: 850px;
+        }
+
+    </style>
+    <script src="../js/Ej9.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img class="cuadro" src="../img/1.jpg" alt="imagen1" id="imagen1" onmouseover="cambiarFoto1()">
+        <img class="cuadro" src="../img/2.jpg" alt="imagen2" id="imagen2" onmouseover="cambiarFoto2()">
+        <img class="cuadro" src="../img/3.jpg" alt="imagen3" id="imagen3" onmouseover="cambiarFoto3()">
+        <img class="cuadro" src="../img/4.jpg" alt="imagen4" id="imagen4" onmouseover="cambiarFoto4()">
+    </div>
+    <div class="container">
+        <img class="fotoGrande" src="" alt="" id="fotoGrande" >
+    </div>
+</body>
+</html>
