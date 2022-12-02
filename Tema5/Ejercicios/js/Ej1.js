@@ -1,3 +1,10 @@
+window.onload = iniciar
+
+function iniciar() {
+    
+    document.getElementById('texto').addEventListener('blur', mayuscula, false)
+
+}
 
 function mayuscula() {
     

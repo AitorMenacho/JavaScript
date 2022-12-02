@@ -1,3 +1,5 @@
+window.onload
+
 function cambiar() {
     
     var texto = document.getElementById("texto");

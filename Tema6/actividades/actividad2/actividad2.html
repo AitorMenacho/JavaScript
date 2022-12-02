@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes</title>
+    <script src="actividad2.js"></script>
+    <style>
+        .cuerpo{
+            display: flex;
+            flex-direction: wrap;
+        }
+    </style>
+</head>
+<body style="background-color: #0d8243;">
+    <h1 style="color: #fff; text-align: center;">Solicitudes de escolarización curso 2014/15</h1>
+    <div class="cuerpo">
+        <div>
+            <img src="solicitud.gif" alt="Solicu¡itud">
+        </div>
+        <div style="width: 80%; margin-left: 5%; color: #fff;">
+            <h3 style="font-weight: bold;" > Solicitudes recibidas </h3>
+            <form>
+                <label for="">Nombre:</label>
+                <input type="text" name="" id="nombre" required>
+                <label for="">Apellidos:</label>
+                <input type="text" name="" id="apellidos" required>
+                <label for="">Curso:</label>
+                <select name="" id="curso" required>
+                    <option value="1ºESO">1º ESO</option>
+                    <option value="2ºESO">2º ESO</option>
+                    <option value="3ºESO">3º ESO</option>
+                    <option value="4ºESO">4º ESO</option>
+                    <option value="1ºBachillerato">1º Bachillerato</option>
+                    <option value="2ºBachilletato">2º Bachillerato</option>
+                </select>
+                <input id="annadir" type="button" value="Añadir solicitud">
+            </form>
+
+            <h1 style="font-weight: bold; margin-top: 10%;" >Solicitudes registradas</h1>
+            <table id="registros" border="1">
+                <tr>
+                    <th style="padding: 2px;" >Identificador</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Curso</th>
+                    <th></th>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</body>
+</html>
