@@ -1,19 +1,22 @@
 window.onload = botones;
 
+var totalFilas = 0
+
 function botones() {    
 
     nodoTabla = document.getElementById("table1");
 
-    document.getElementById('botonEliminar').onclick
+    document.getElementById('botonAgregar').addEventListener("click", agregar);
+    document.getElementById('botonEliminar').addEventListener("click", eliminar);
     document.getElementById('botonAumentar').addEventListener('click', aumentarBorde);
     document.getElementById('botonDisminuir').addEventListener('click', reducirBorde);
-    document.getElementById('botonLeer').onclick;
+    document.getElementById('botonLeer').addEventListener('click', leer);
 
 }
 
 function aumentarBorde() {
 
-    if( parseInt(nodoTabla.border) < 10 ) {
+    if( parseInt(nodoTabla.border) < 20 ) {
 
         nodoTabla.border = parseInt(nodoTabla.border) + 1;
 
@@ -32,10 +35,6 @@ function reducirBorde() {
 }
 
 function agregar() {
-    document.getElementById('botonEliminar').disabled = false;
-    document.getElementById('botonAumentar').disabled = false;
-    document.getElementById('botonDisminuir').disabled = false;
-    document.getElementById('botonLeer').disabled = false;
 
     if( totalFilas < 5 ){
         
@@ -56,8 +55,34 @@ function agregar() {
         document.getElementById('botonAgregar').disabled = true;
     }
 
+    if (totalFilas > 1) {
+        document.getElementById('botonEliminar').disabled = false;
+    }    
+
+}
+
+function eliminar() {
+
+    if (totalFilas > 1) {
+        totalFilas -= 1;
+        nodoTabla.removeChild(nodoTabla.lastChild);
+    }
+
     if (totalFilas == 1) {
         document.getElementById('botonEliminar').disabled = true;
     }
 
+    if (totalFilas < 5) {
+        document.getElementById('botonAgregar').disabled = false;
+    }
+
+}
+
+function leer() {
+    
+        var filas = nodoTabla.rows.length;
+    
+        for (i = 0; i < filas; i++) {
+            alert("Tamaño del borde: " + nodoTabla.border)
+        }
 }
