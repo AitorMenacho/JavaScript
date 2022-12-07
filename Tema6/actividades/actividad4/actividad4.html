@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+    <style>
+        .form {
+            display: flex;
+            flex-direction: wrap;
+            justify-content: space-between;
+        }
+    </style>
+    <script src="actividad4.js"></script>
+</head>
+
+<body>
+    <img src="Cabecera.png" alt="cabecera" width="100%">
+    <hr>
+        <div>
+            <h3 style="font-weight: bold;">Datos de la solicitud:</h3>
+            <div style="background-color: gainsboro;">
+                <p>Datos del vehiculo solicitado:</p>
+            </div>
+            <div class="form">
+                <label for="">Marca</label>
+                <input type="text" name="" id="marca" required>
+                <label for="">Modelo</label>
+                <input type="text" name="" id="modelo" required>
+                <label for="">Año fabricación</label>
+                <input type="date" name="" id="fabricacion" min="1995-01-01" max="2022-12-31" required>
+                <label for="">Kms</label>
+                <input type="number" name="" id="kms" min="0" max="999999" required>
+                <label for="">Fecha de entrega</label>  
+                <input type="date" name="" min="2022-03-01" max="2022-12-31" id="entrega" required>
+            </div>
+        </div>
+        <div>
+            <div style="background-color: gainsboro;">
+                <p>Datos del cliente:</p>
+            </div>
+            <div class="form">
+                <label for="">Nombre</label>
+                <input type="text" name="" id="nombre" required>
+                <label for="">Apellidos</label>
+                <input type="text" name="" id="apellidos" required>
+                <label for="">Correo electrónico</label>
+                <input type="email" name="" id="email" required>
+                <label for="">Teléfono</label>
+                <input type="text" name="" id="telefono" pattern="[0-9]{9}" required>
+                <input type="button" id="annadir" value="Añadir solicitud" ></input>
+            </div>
+        </div>
+
+    <div style="margin-top: 3%;" >
+        <h3 style="font-weight: bold;">Solicitudes registradas:</h3>
+        <table border="1" id="solicitudes">
+            <tr style="background-color: red; color: white;" >
+                <th>Identificador</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año de fabricación</th>
+                <th>Kms</th>
+                <th>Fecha de entrega</th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
