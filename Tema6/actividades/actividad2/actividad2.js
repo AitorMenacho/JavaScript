@@ -39,7 +39,7 @@ function agregar() {
             var tabla = document.getElementById("registros");
 
             // Creamos una fila
-            var fila = document.createElement("tr");
+            var fila   = document.createElement("tr");
             var celda1 = document.createElement("td");
             var celda2 = document.createElement("td");
             var celda3 = document.createElement("td");
