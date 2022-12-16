@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6</title>
+    <script src="actividad6.js"></script>
+    <style>
+        .cuerpo{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <input type="button" id="genera" value="genera un número" style="margin-bottom: 1%" >
+    <div class="cuerpo" >
+        <div class="cabecera" id="numero" style="border: 3px solid black; width: 250px; height: 250px; margin-bottom: 5%;">
+            
+        </div>
+    </div>
+    <div class="cuerpo">
+        <div class="factorial">
+            <input type="button" id="factorial" value="Calcular factorial" style="margin-bottom: 3%;" >
+            <div class="cabecera" id="numeroFactorial" style="border: 3px solid black; width: 250px; height: 250px;">
+                
+            </div>
+        </div>
+        <div class="primo">
+            <input type="button" id="primo" value="¿Es primo?" style="margin-bottom: 3%;" >
+            <div class="cabecera" id="esPrimo" style="border: 3px solid black; width: 250px; height: 250px;">
+                
+            </div>
+        </div>
+        <div class="par">
+            <input type="button" id="par" value="¿Es par?" style="margin-bottom: 3%;" >
+            <div class="cabecera" id="esPar" style="border: 3px solid black; width: 250px; height: 250px;">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
